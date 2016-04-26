@@ -1,0 +1,26 @@
+{
+  "name": "introduction-to-es6",
+  "version": "1.0.0",
+  "description": "An introduction to new ES6 features in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/learn-co-curriculum/introduction-to-es6.git"
+  },
+  "keywords": [
+    "learn",
+    "flatiron",
+    "es6",
+    "node",
+    "javascript"
+  ],
+  "author": "chuck@flatironschool.com",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/learn-co-curriculum/introduction-to-es6/issues"
+  },
+  "homepage": "https://github.com/learn-co-curriculum/introduction-to-es6#readme"
+}
