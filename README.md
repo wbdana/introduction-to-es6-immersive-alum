@@ -14,7 +14,7 @@ You can get the complete rundown of ES6 features in Node.js [here](https://nodej
 but we'll also run through the features that you might see in the upcoming
 labs here. For our purposes, anything that can be enabled with a simple `"strict
 mode"` declaration is fair game — but we won't teach you about the stuff
-behind the `--es_staging` or `--harmony` flag just yet.  
+behind the `--es_staging` or `--harmony` flag just yet.
 
 ## Aside: Strict Mode
 
@@ -23,10 +23,27 @@ to opt in to a special version of JavaScript called [_strict mode_](https://deve
 
 You can read about the ins and outs of strict mode at the link above —
 generally, it turns silent failures into thrown errors, and it helps prevent
-variables sneaking into the global scope. Strict mode can be invoked by writing
+variables sneaking into the global scope.
+
+That is, in standard mode, the following code would run — it just wouldn't
+do anything:
 
 ```javascript
-"strict mode";
+delete Object.prototype;
+```
+
+But in strict mode, this would throw a `TypeError`:
+
+```javascript
+"use strict";
+
+delete Object.prototype;
+```
+
+Strict mode can be invoked by writing
+
+```javascript
+'use strict';
 ```
 
 at the top of the current script — strict mode then applies to the entire
@@ -46,9 +63,8 @@ function standardFunction() {
 }
 ```
 
-The rules that strict mode enforces are sensible, and it's a good idea to
-write JavaScript that would run in strict mode even if you don't explicitly
-set the mode. Note that some transpilers (like [babel](http://babeljs.io/))
+Strict mode does just as its name implies: it enforces _stricter_ rules on
+the execution of your code. Note that some transpilers (like [babel](http://babeljs.io/))
 can set strict mode for you.
 
 Strict mode also enables some newer features that ES6 developers wanted to make
@@ -122,32 +138,9 @@ You're still right. But [classes](https://developer.mozilla.org/en-US/docs/Web/J
 in JavaScript are awesome, and you'll be seeing them increasingly as ES6
 adoption increases.
 
-Consider the following simple example, based largely on the examples from MDN:
-
-```javascript
-class Polygon {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
-
-  // whaaaaat -- getters!
-  get area() {
-    return this.calcArea();
-  }
-
-  calcArea() {
-    return this.height * this.width;
-  }
-}
-
-const rectangle = new Polygon(10, 5);
-
-console.log(rectangle.area);
-```
-
-That's a lot to take in. Before we dive into the details, let's write the
-equivalent in ES5:
+Consider the following simple example, based largely on the examples from MDN.
+We want to create a `Polygon` prototype and inherit from it. We'll start with
+ES5:
 
 ```javascript
 function Polygon(height, width) {
@@ -224,7 +217,7 @@ Eh, close enough?
 in JavaScript, it's to show that such a goal isn't feasible and won't be
 achieved in a nice way.)
 
-Back to our `Polygon` class:
+Now let's try with ES6:
 
 ```javascript
 class Polygon {
@@ -233,6 +226,7 @@ class Polygon {
     this.width = width;
   }
 
+  // whaaaaat -- getters!
   get area() {
     return this.calcArea();
   }
@@ -241,9 +235,13 @@ class Polygon {
     return this.height * this.width;
   }
 }
+
+const rectangle = new Polygon(10, 5);
+
+console.log(rectangle.area);
 ```
 
-Let's try to extend it:
+Let's extend it:
 
 ```javascript
 class Square extends Polygon {
@@ -264,7 +262,9 @@ mySquare.constructor;
 mySquare.area;
 ```
 
-That was easy.
+Whoa. That was easy.
+
+![that was easy](http://i.giphy.com/zcCGBRQshGdt6.gif)
 
 ### Arrow functions
 
