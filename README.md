@@ -1,5 +1,13 @@
-Introduction to ES6
----
+# Introduction to ES6
+
+## Objectives
+
+1. Describe the major new features in ES6
+2. Explain how `let` and `const` differ from `var`
+3. Describe how to use arrow functions
+4. Explain the value of the spread operator
+
+## Introduction
 
 Up to now, you've been working in the browser and on the server with the version of JavaScript known as ECMAScript 5. ECMAScript is an evolving standard, the complete history of which we don't have time to cover here.
 
