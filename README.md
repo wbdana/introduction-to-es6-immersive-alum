@@ -65,6 +65,15 @@ Strict mode also enables some newer features that ES6 developers wanted to make 
 
 Remember, read the [docs](https://nodejs.org/en/docs/es6/) for the complete low-down on ES6 in Node.js. We'll cover a subset of the new features below.
 
+* [`const` and `let`](#block-scoping)
+* [Classes](#classes-use-strict)
+* [Arrow Functions](#arrow-functions)
+* [Promises](#promises)
+* [Object Literal Extensions](#object-literal-extensions)
+* [Spread Operator](#spread-operator)
+* [Template Strings](#template-strings)
+* [Destructuring](#destructuring)
+
 ### Block Scoping
 
 #### `let` ("use strict")
@@ -374,7 +383,7 @@ printArgs(...a);
 ```
 
 
-### Template String
+### Template Strings
 
 [Template strings](https://nodejs.org/en/docs/es6/) in ES6 are most commonly used for string interpolation. Instead of writing:
 
@@ -414,6 +423,20 @@ function tag(strings, ...values) {
 tag`Hello ${ a + b } world ${ a * b }`;
 // "Bazinga!"
 ```
+
+### Destructuring
+
+Destructuring makes it easier than ever to pull values out of objects and arrays and store them in variables. We destructure an array by putting our new variable names at the corresponding index and an object by giving our variable the same name as the key we are interested in.
+
+```js
+const [a, b] = [1, 2];
+// a === 1 && b === 2
+
+const { a, b } = { a: 1, b: 2 }
+// a === 1 && b === 2
+```
+
+To see what other amazing things we can to with destructuring, check out the [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ## Conclusion
 
