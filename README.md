@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Up to now, you've been working in the browser and on the server with the version of JavaScript known as ECMAScript 5. ECMAScript is an evolving standard, the complete history of which we don't have time to cover here.
+Up to now, you've probably been working in the browser and on the server with the version of JavaScript known as ECMAScript 5. ECMAScript is an evolving standard, the complete history of which we don't have time to cover here.
 
 But you've probably also heard talk about this thing called ECMAScript 6, ES6, or ES2015 (they kinda missed the deadline on that one). [ES6](http://es6-features.org/) is the next specification for JavaScript, and it's finally started to appear in a major way in browsers and on servers thanks to Node.js 5.
 
@@ -61,9 +61,9 @@ Strict mode does just as its name implies: it enforces _stricter_ rules on the e
 
 Strict mode also enables some newer features that ES6 developers wanted to make sure users explicitly opted in to.
 
-## Node.js ES6 Features
+## ES6 Features
 
-Remember, read the [docs](https://nodejs.org/en/docs/es6/) for the complete low-down on ES6 in Node.js. We'll cover a subset of the new features below.
+There are a lot of new feature, buts for now we'll cover a subset of the new features below.
 
 * [`const` and `let`](#block-scoping)
 * [Classes](#classes-use-strict)
