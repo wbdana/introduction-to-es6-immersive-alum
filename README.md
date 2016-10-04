@@ -63,7 +63,7 @@ Strict mode also enables some newer features that ES6 developers wanted to make 
 
 ## ES6 Features
 
-There are a lot of new feature, buts for now we'll cover a subset of the new features below.
+There are a lot of new feature, but for now we'll cover a subset of the new features below.
 
 * [`const` and `let`](#block-scoping)
 * [Classes](#classes-use-strict)
@@ -451,3 +451,5 @@ There are _tons_ of new features in ES6, and we don't have time to cover them al
 - [Enhanced object literals](https://github.com/lukehoban/es6features#enhanced-object-literals): https://github.com/lukehoban/es6features#enhanced-object-literals
 - [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
 - [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/introduction-to-es6'>Introduction To ES6/ECMA2015</a> on Learn.co and start learning to code for free.</p>
