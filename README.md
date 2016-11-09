@@ -63,7 +63,7 @@ Strict mode also enables some newer features that ES6 developers wanted to make 
 
 ## ES6 Features
 
-There are a lot of new feature, but for now we'll cover a subset of the new features below.
+There are a lot of new features, but for now we'll cover a subset of the new features below.
 
 * [`const` and `let`](#block-scoping)
 * [Classes](#classes-use-strict)
