@@ -174,7 +174,7 @@ Well, that seems like it just about works. But what if we check the variable `sq
 
 ```javascript
 // [Function: Polygon]
-square.constuctor;
+square.constructor;
 ```
 
 That's not right. It should be `[Function: Square]`. We can fix it, though:
